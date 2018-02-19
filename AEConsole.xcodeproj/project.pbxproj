@@ -23,7 +23,6 @@
 		8B5894D31CA9D857005F0B9D /* AEConsole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEConsole.h; sourceTree = "<group>"; };
 		8B5894D51CA9D857005F0B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B5894DB1CA9D86C005F0B9D /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
-		8BDFB39F1CB181A500F0F6F1 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		8BE817AE1CAF442F00FCBE4A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		8BE817AF1CAF442F00FCBE4A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BE817B01CAF442F00FCBE4A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -49,7 +48,6 @@
 				8BE817AF1CAF442F00FCBE4A /* LICENSE */,
 				8BE817B01CAF442F00FCBE4A /* README.md */,
 				8BE817AE1CAF442F00FCBE4A /* CHANGELOG.md */,
-				8BDFB39F1CB181A500F0F6F1 /* Cartfile */,
 				8B022D2E1CB071710039B5F4 /* AEConsole.podspec */,
 			);
 			name = "Supporting Files";
