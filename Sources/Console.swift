@@ -5,10 +5,9 @@
  */
 
 import UIKit
-import AELog
 
 /// Facade for displaying debug log in Console UI overlay on top of your app.
-open class Console: LogDelegate {
+open class Console {
     
     // MARK: - Properties
 
@@ -29,7 +28,6 @@ open class Console: LogDelegate {
     ///
     /// - Parameter window: Main window for the app (AppDelegate's window).
     open func configure(in window: UIWindow?) {
-        Log.shared.delegate = self
         self.window = window
         self.brain.configureConsole(in: window)
     }
@@ -80,12 +78,5 @@ open class Console: LogDelegate {
                 brain.console.becomeFirstResponder()
             }
         }
-    }
-
-    // MARK: - LogDelegate
-
-    open func didLog(line: Line, mode: Log.Mode) {
-        addLogLine(line: line)
-    }
-    
+    }    
 }

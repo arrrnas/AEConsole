@@ -5,7 +5,6 @@
  */
 
 import UIKit
-import AELog
 
 internal final class View: UIView {
     
@@ -469,13 +468,13 @@ extension View {
     @objc
     internal func didTapForwardTouchesButton(_ sender: UIButton) {
         forwardTouchesButton.isSelected = !forwardTouchesButton.isSelected
-        aelog("Forward Touches [\(forwardTouchesButton.isSelected)]")
+        Console.shared.addLogLine(line: "Forward Touches [\(forwardTouchesButton.isSelected)]")
     }
     
     @objc
     internal func didTapAutoFollowButton(_ sender: UIButton) {
         autoFollowButton.isSelected = !autoFollowButton.isSelected
-        aelog("Auto Follow [\(autoFollowButton.isSelected)]")
+        Console.shared.addLogLine(line: "Auto Follow [\(autoFollowButton.isSelected)]")
     }
     
     @objc
@@ -489,7 +488,7 @@ extension View {
         brain.exportLogFile { [weak self] (url) in
             do {
                 let url = try url()
-                aelog("Initiated sharing of log file at url: \(url)")
+                Console.shared.addLogLine(line: "Initiated sharing of log file at url: \(url)")
                 DispatchQueue.main.async {
                     self?.shareLogFile(at: url) { (_, _, _, _) in
                         self?.toggleUI()

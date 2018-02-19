@@ -5,7 +5,6 @@
  */
 
 import UIKit
-import AELog
 
 internal final class Brain: NSObject {
     
@@ -86,16 +85,16 @@ internal final class Brain: NSObject {
         let log = stringLines.joined(separator: "\n")
 
         if isEmpty(log) {
-            aelog("Log is empty, nothing to export here.")
+            Console.shared.addLogLine(line: "Log is empty, nothing to export here.")
             throw NSError(domain: "net.tadija.AEConsole/Brain", code: 0, userInfo: nil)
         } else {
             do {
                 let fileURL = logFileURL
                 try log.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-                aelog("Log is exported to path: \(fileURL)")
+                Console.shared.addLogLine(line: "Log is exported to path: \(fileURL)")
                 return fileURL
             } catch {
-                aelog("Log exporting failed with error: \(error)")
+                Console.shared.addLogLine(line: "Log exporting failed with error: \(error)")
                 throw error
             }
         }
@@ -125,13 +124,13 @@ extension Brain {
     
     private func applyFilter() {
         guard let filter = filterText else { return }
-        aelog("Filter Lines [\(isFilterActive)] - <\(filter)>")
+        Console.shared.addLogLine(line: "Filter Lines [\(isFilterActive)] - <\(filter)>")
         let filtered = lines.filter({ $0.description.localizedCaseInsensitiveContains(filter) })
         filteredLines = filtered
     }
     
     private func clearFilter() {
-        aelog("Filter Lines [\(isFilterActive)]")
+        Console.shared.addLogLine(line: "Filter Lines [\(isFilterActive)]")
         filteredLines.removeAll()
     }
     
