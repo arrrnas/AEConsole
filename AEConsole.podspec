@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name = 'AEConsole'
-    s.version = '0.6.0'
+    s.version = '0.7.0'
     s.license = { :type => 'MIT', :file => 'LICENSE' }
     s.summary = 'Customizable Console UI overlay with debug log on top of your iOS App'
 
@@ -13,7 +13,5 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/*.swift'
 
     s.ios.deployment_target = '9.0'
-
-    s.dependency 'AELog', '~> 0.5.5'
 
 end
