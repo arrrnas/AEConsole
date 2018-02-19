@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.7.0
+
+- Removed AELog dependency
+
 ## Version 0.6.0
 
 - Added sharing of exported log file
